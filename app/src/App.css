@@ -28,5 +28,9 @@ div.app {
 	min-height: 100vh;
 	margin: 0;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
+}
+
+.main {
+	flex: 100% 1 1;
 }

@@ -12,7 +12,8 @@
 	
 	text-decoration: none;
 	
-	margin-bottom: auto;
+	margin-bottom: 0;
+	height: fit-content;
 }
 
 .header a.logo {
