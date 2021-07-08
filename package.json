@@ -1,0 +1,25 @@
+{
+  "name": "harmonium",
+  "version": "0.1.0",
+  "description": "Piano virtual para aprender sobre escalas y acordes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AugustoNicola/Harmonium.git"
+  },
+  "keywords": [
+    "react",
+    "piano",
+    "frontend",
+    "react-router"
+  ],
+  "author": "Augusto Nicola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AugustoNicola/Harmonium/issues"
+  },
+  "homepage": "https://github.com/AugustoNicola/Harmonium#readme"
+}
