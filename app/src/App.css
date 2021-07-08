@@ -23,3 +23,10 @@ html {
 	font-size: 62.5%;
 	font-family: var(--fuente-principal);
 }
+
+div.app {
+	min-height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-flow: row wrap;
+}

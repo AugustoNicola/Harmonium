@@ -1,0 +1,27 @@
+.footer {
+	background-image: linear-gradient(to right, #53c3b2, #45b7a9, #37aba1, #27a098, #12948f);
+	
+	display: block;
+	width: 100%;
+	background-color: var(--color-primario-oscuro);
+	padding: 1.2rem 0;
+	
+	margin-top: auto;
+	width: 100%;
+}
+.footer a p {
+	margin: 0;
+	font-size: 1.4rem;
+	text-align: center;
+}
+.footer a, .footer a:visited {
+	color: var(--color-blanco);
+	text-decoration: none;
+}
+.footer a:hover {
+	color: var(--color-blanco-hover);
+	cursor: pointer;
+}
+.footer a i {
+	font-size: 1.7rem;
+}

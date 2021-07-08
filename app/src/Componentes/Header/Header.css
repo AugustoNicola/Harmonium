@@ -1,5 +1,5 @@
 .header {
-	background-image: linear-gradient(to right, #2cdfd3, #24dac7, #21d6ba, #22d1ad, #28cc9f);
+	background-image: linear-gradient(to right, #29d2c7, #21d1be, #1ecfb4, #21ceaa, #28cc9f);
 	
 	display: flex;
 	flex-flow: row nowrap;
@@ -11,6 +11,8 @@
 	position: relative;
 	
 	text-decoration: none;
+	
+	margin-bottom: auto;
 }
 
 .header a.logo {
