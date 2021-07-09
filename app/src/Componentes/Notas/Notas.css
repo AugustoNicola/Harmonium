@@ -1,5 +1,51 @@
 .notas {
-	background-color: aquamarine;
-	
 	flex: 30% 0;
+	width: 100%;
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 2rem;
+	
+	/* * varibales de colores para notas */
+	--color1: linear-gradient(135deg, #29D2C7 0%, #29D2C7 25%, #2DF986 75%, #0EF6F5 100%);
+	--color2: linear-gradient(135deg, #29C0B6 0%, #29C0B6 25%, #2DF986 75%, #0EF6F5 100%);
+	--color3: linear-gradient(135deg, #28AEA6 0%, #28AEA6 25%, #2DF986 75%, #0EF6F5 100%);
+	--color4: linear-gradient(135deg, #269D95 0%, #269D95 25%, #2DF986 75%, #0EF6F5 100%);
+	
+	--color1-hover: linear-gradient(135deg, #239A92 0%, #239A92 25%, #2DF986 75%, #0EF6F5 100%);
+	--color2-hover: linear-gradient(135deg, #238D86 0%, #238D86 25%, #2DF986 75%, #0EF6F5 100%);
+	--color3-hover: linear-gradient(135deg, #238D86 0%, #238D86 25%, #2DF986 75%, #0EF6F5 100%);
+	--color4-hover: linear-gradient(135deg, #1F736E 0%, #1F736E 25%, #2DF986 75%, #0EF6F5 100%);
+}
+
+.notas > .nota {
+	background-color: rgb(197, 88, 88);
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	border-radius: 15px;
+	
+	cursor: pointer;
+	
+	background-size: 400% 400%;
+	background-repeat: no-repeat;
+	transition: .5s all;
+}
+.notas > .nota.activa {background-position: 100% 100%;}
+
+.notas > .nota:nth-of-type(4n+1) {background-image: var(--color1);}
+.notas > .nota:nth-of-type(4n+2) {background-image: var(--color2);}
+.notas > .nota:nth-of-type(4n+3) {background-image: var(--color3);}
+.notas > .nota:nth-of-type(4n+4) {background-image: var(--color4);}
+.notas > .nota:nth-of-type(4n+1):hover {background-image: var(--color1-hover);}
+.notas > .nota:nth-of-type(4n+2):hover {background-image: var(--color2-hover);}
+.notas > .nota:nth-of-type(4n+3):hover {background-image: var(--color3-hover);}
+.notas > .nota:nth-of-type(4n+4):hover {background-image: var(--color4-hover);}
+
+.notas > .nota > h3 {
+	font-size: 3.6rem;
+	font-family: var(--fuente-principal);
+	margin: 0;
 }
