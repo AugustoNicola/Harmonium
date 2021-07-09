@@ -25,25 +25,26 @@ const App = () => {
 						<Route exact path="/" component={Inicio} />
 						
 						<Route exact path={["/acordes", "/escalas"]}>
-							<h1>Título!</h1>
-							<div className="contenedor-selectores">
-								<Notas />
-								
-								<Switch>
-									<Route exact path="/acordes" component={Acordes} />
-									<Route exact path="/escalas" component={Escalas} />
-								</Switch>
-								
-								<Opciones />
+							<div className="main-selectores">
+								<h1>Elegí una nota tónica y un tipo para formar un acorde</h1>
+								<div className="contenedor-selectores">
+									<Notas />
+									
+									<Switch>
+										<Route exact path="/acordes" component={Acordes} />
+										<Route exact path="/escalas" component={Escalas} />
+									</Switch>
+									
+									<Opciones />
+								</div>
 							</div>
 						</Route>
 						
 						<Route path="*" component={NoEncontrado} />
 					</Switch>
+					
+					<Piano />
 				</main>
-				
-				<Piano />
-				
 				<Footer />
 			</div>
 		</Router>

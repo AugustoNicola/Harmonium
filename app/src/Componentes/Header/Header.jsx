@@ -13,7 +13,7 @@ const Header = () => {
 			</svg>
 			<h2>Harmonium</h2>
 			</Link>
-			<div className="opciones">	
+			<div className="opciones-header">	
 				<Link to="/acordes" className="opcion">
 					<h2>Acordes</h2>
 				</Link>

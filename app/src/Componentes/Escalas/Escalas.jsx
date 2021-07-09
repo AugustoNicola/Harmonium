@@ -1,8 +1,10 @@
 import React from 'react';
 
+import "./Escalas.css";
+
 const Escalas = () => {
 	return (
-		<div>
+		<div className="escalas">
 			escalas
 		</div>
 	)

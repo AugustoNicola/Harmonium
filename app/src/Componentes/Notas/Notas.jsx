@@ -1,8 +1,10 @@
 import React from 'react';
 
+import "./Notas.css";
+
 const Notas = () => {
 	return (
-		<div>
+		<div className="notas">
 			notas
 		</div>
 	)

@@ -36,7 +36,7 @@
 }
 .header a.logo:hover svg, .header a.logo:hover h2 {color: var(--color-blanco-hover);}
 
-.header .opciones {
+.header .opciones-header {
 	width: 100%;
 	
 	display: flex;
@@ -53,4 +53,4 @@
 	font-size: 2.4rem;
 	font-weight: 700;
 }
-.header .opciones .opcion:hover h2 {color: var(--color-blanco-hover);}
+.header .opciones-header .opcion:hover h2 {color: var(--color-blanco-hover);}

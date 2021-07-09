@@ -8,6 +8,8 @@
 	--color-primario-footer: #146761;
 	--color-primario-titulo: #00c9a7;
 	
+	--color-fondo-app: #F0FFFF;
+	
 	--color-blanco: #e0fffc;
 	--color-blanco-hover: #e2e2e2;
 	
@@ -25,6 +27,8 @@
 html {
 	font-size: 62.5%;
 	font-family: var(--fuente-principal);
+	
+	background-color: var(--color-fondo-app);
 }
 
 div.app {
@@ -34,12 +38,17 @@ div.app {
 	flex-flow: column wrap;
 }
 
-.main {
-	flex: 50% 0 0;
-	background-color: cornsilk;
+h1 {
+	font-family: var(--fuente-titulo);
+	font-weight: 700;
+	font-size: 3.2rem;
+	text-align: center;
+	color: var(--color-primario-titulo);
+	
+	margin: 2.2rem 0;
 }
 
-/** ################## UTLIDADES ################## */
+/** ################## UTILIDADES ################## */
 
 *[data-transicion] {
 	opacity: 0;
@@ -49,4 +58,34 @@ div.app {
 @keyframes transicion {
 	from {opacity: 0;}
 	to {opacity: 1;}
+}
+
+
+/** ################## MAIN ################## */
+.main {
+	flex: 100% 1 1;
+	
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.main-selectores {
+	flex: 60% 1 1;
+	
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.main-selectores .contenedor-selectores {
+	flex-grow: 1;
+	
+	padding: 2rem;
+	width: 100%;
+	
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 1.6rem;
 }
