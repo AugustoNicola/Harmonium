@@ -20,7 +20,7 @@ const App = () => {
 			<div className="app">
 				<Header />
 				
-				<div className="main">
+				<main className="main">
 					<Switch>
 						<Route exact path="/" component={Inicio} />
 						
@@ -40,7 +40,7 @@ const App = () => {
 						
 						<Route path="*" component={NoEncontrado} />
 					</Switch>
-				</div>
+				</main>
 				
 				<Piano />
 				

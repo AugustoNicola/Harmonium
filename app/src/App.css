@@ -6,9 +6,12 @@
 	--color-primario: #2CDFD3;
 	--color-primario-oscuro: #27C4BA;
 	--color-primario-footer: #146761;
+	--color-primario-titulo: #00c9a7;
 	
 	--color-blanco: #e0fffc;
 	--color-blanco-hover: #e2e2e2;
+	
+	--color-fondo-oscuro: #444444;
 	
 	--fuente-principal: "Rubik", sans-serif;
 	--fuente-titulo: "Open Sans", sans-serif;
@@ -32,5 +35,6 @@ div.app {
 }
 
 .main {
-	flex: 100% 1 1;
+	flex: 50% 0 0;
+	background-color: cornsilk;
 }

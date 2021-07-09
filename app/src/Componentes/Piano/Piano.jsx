@@ -1,9 +1,11 @@
 import React from 'react';
 
+import "./Piano.css";
+
 const Piano = () => {
 	return (
-		<div>
-			
+		<div className="piano">
+			piano
 		</div>
 	)
 }
