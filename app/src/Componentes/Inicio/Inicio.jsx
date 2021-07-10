@@ -10,7 +10,7 @@ const Inicio = () => {
 			
 			<p data-transicion style={{animationDelay: "0.2s"}}>Para empezar, podés seleccionar qué concepto querés trabajar:</p>
 			
-			<div className="opciones">
+			<div className="opciones-inicio">
 				<Link to="/acordes" className="opcion" data-transicion style={{animationDelay: "0.6s"}}>
 					<h2>Acordes</h2>
 					<p>Un acorde se produce tocando múltiples notas al mismo tiempo, creando una nueva armonía distinta a cualquier nota individual. Hay muchos acordes, y las notas que los componen son claves para entenderlos.</p>

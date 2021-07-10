@@ -1,5 +1,61 @@
 .acordes {
-	background-color: darkgoldenrod;
-	
 	flex: 60% 0;
+	width: 100%;
+	
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 2rem;
+	
+	/* * varibales de colores para notas */
+	--color1: linear-gradient(135deg, #8D5AB4 0%, #8D5AB4 25%, #E562F2 75%, #A45ED1 100%);
+	--color2: linear-gradient(135deg, #8555AA 0%, #8555AA 25%, #E562F2 75%, #A45ED1 100%);
+	--color3: linear-gradient(135deg, #7E50A1 0%, #7E50A1 25%, #E562F2 75%, #A45ED1 100%);
+	--color4: linear-gradient(135deg, #764B97 0%, #764B97 25%, #E562F2 75%, #A45ED1 100%);
+	--color5: linear-gradient(135deg, #6F478D 0%, #6F478D 25%, #E562F2 75%, #A45ED1 100%);
+	--color6: linear-gradient(135deg, #674283 0%, #674283 25%, #E562F2 75%, #A45ED1 100%);
+	--color7: linear-gradient(135deg, #5F3D7A 0%, #5F3D7A 25%, #E562F2 75%, #A45ED1 100%);
+	
+	--color1-hover: linear-gradient(135deg, #6F478D 0%, #6F478D 25%, #E562F2 75%, #A45ED1 100%);
+	--color2-hover: linear-gradient(135deg, #684385 0%, #684385 25%, #E562F2 75%, #A45ED1 100%);
+	--color3-hover: linear-gradient(135deg, #633F7E 0%, #633F7E 25%, #E562F2 75%, #A45ED1 100%);
+	--color4-hover: linear-gradient(135deg, #5D3B76 0%, #5D3B76 25%, #E562F2 75%, #A45ED1 100%);
+	--color5-hover: linear-gradient(135deg, #57386F 0%, #57386F 25%, #E562F2 75%, #A45ED1 100%);
+	--color6-hover: linear-gradient(135deg, #513467 0%, #513467 25%, #E562F2 75%, #A45ED1 100%);
+	--color7-hover: linear-gradient(135deg, #4B3060 0%, #4B3060 25%, #E562F2 75%, #A45ED1 100%);
+}
+
+.acordes > .acorde {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	border-radius: 15px;
+	
+	cursor: pointer;
+	
+	background-size: 400% 400%;
+	background-repeat: no-repeat;
+	transition: .5s all;
+}
+.acordes > .acorde.activa {background-position: 100% 100%;}
+
+.acordes > .acorde:nth-of-type(7n+1) {background-image: var(--color1);}
+.acordes > .acorde:nth-of-type(7n+2) {background-image: var(--color2);}
+.acordes > .acorde:nth-of-type(7n+3) {background-image: var(--color3);}
+.acordes > .acorde:nth-of-type(7n+4) {background-image: var(--color4);}
+.acordes > .acorde:nth-of-type(7n+5) {background-image: var(--color5);}
+.acordes > .acorde:nth-of-type(7n+6) {background-image: var(--color6);}
+.acordes > .acorde:nth-of-type(7n+7) {background-image: var(--color7);}
+.acordes > .acorde:nth-of-type(7n+1):hover {background-image: var(--color1-hover);}
+.acordes > .acorde:nth-of-type(7n+2):hover {background-image: var(--color2-hover);}
+.acordes > .acorde:nth-of-type(7n+3):hover {background-image: var(--color3-hover);}
+.acordes > .acorde:nth-of-type(7n+4):hover {background-image: var(--color4-hover);}
+.acordes > .acorde:nth-of-type(7n+5):hover {background-image: var(--color5-hover);}
+.acordes > .acorde:nth-of-type(7n+6):hover {background-image: var(--color6-hover);}
+.acordes > .acorde:nth-of-type(7n+7):hover {background-image: var(--color7-hover);}
+
+.acordes > .acorde > h3 {
+	font-size: 3.6rem;
+	font-family: var(--fuente-principal);
+	margin: 0;
 }

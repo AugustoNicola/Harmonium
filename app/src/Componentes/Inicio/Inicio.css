@@ -12,7 +12,7 @@
 	font-family: var(--fuente-principal);
 }
 
-.inicio .opciones {
+.inicio .opciones-inicio {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
@@ -23,7 +23,7 @@
 	margin: 0 auto;
 }
 
-.inicio .opciones .opcion {
+.inicio .opciones-inicio .opcion {
 	flex: 50% 1 1;
 	
 	text-decoration: none;
@@ -41,7 +41,7 @@
 	-webkit-box-shadow: 15px 3px 25px -12px rgba(0,0,0,0.65);
 	-moz-box-shadow: 15px 3px 25px -12px rgba(0,0,0,0.65);
 }
-.inicio .opciones .opcion:hover {
+.inicio .opciones-inicio .opcion:hover {
 	background-position: 100% 100%;
 	
 	box-shadow: 10px 10px 57px -12px rgba(38,164,174,0.98);
@@ -49,7 +49,7 @@
 	-moz-box-shadow: 10px 10px 57px -12px rgba(38,164,174,0.98);
 }
 
-.inicio .opciones .opcion h2 {
+.inicio .opciones-inicio .opcion h2 {
 	font-family: var(--fuente-principal);
 	font-size: 3.2rem;
 	text-align: center;
@@ -57,7 +57,7 @@
 	margin: 1rem 0;
 }
 
-.inicio .opciones .opcion p {
+.inicio .opciones-inicio .opcion p {
 	font-family: var(--fuente-principal);
 	font-size: 2.6rem;
 	text-align: justify;
