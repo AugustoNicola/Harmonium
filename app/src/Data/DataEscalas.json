@@ -1,22 +1,22 @@
 [
 	{
 		"posicion": 0,
-		"nombre": "mayor",
+		"nombre": "Mayor",
 		"distanciaNotas": [2, 2, 1, 2, 2, 2, 1]
 	},
 	{
 		"posicion": 1,
-		"nombre": "antigua",
+		"nombre": "Antigua",
 		"distanciaNotas": [2, 1, 2, 2, 1, 2, 2]
 	},
 	{
 		"posicion": 2,
-		"nombre": "armónica",
+		"nombre": "Armónica",
 		"distanciaNotas": [2, 1, 2, 2, 1, 3, 1]
 	},
 	{
 		"posicion": 3,
-		"nombre": "bachiana",
+		"nombre": "Bachiana",
 		"distanciaNotas": [2, 1, 2, 2, 2, 2, 1]
 	}
 ]

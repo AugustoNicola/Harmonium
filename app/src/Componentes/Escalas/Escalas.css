@@ -1,0 +1,61 @@
+form#escalas {
+	flex: 60% 0;
+	width: 100%;
+	
+	display: grid;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	grid-template-rows: repeat(4, minmax(0, 1fr));
+	gap: 1rem;
+	
+	/* * varibales de colores para notas */
+	--color1: linear-gradient(135deg, #AB5817 0%, #AB5817 25%, #F9A83F 75%, #BB5F0C 100%);
+	--color2: linear-gradient(135deg, #974F17 0%, #974F17 25%, #F9A83F 75%, #BB5F0C 100%);
+	--color3: linear-gradient(135deg, #844616 0%, #844616 25%, #F9A83F 75%, #BB5F0C 100%);
+	--color4: linear-gradient(135deg, #713D15 0%, #713D15 25%, #F9A83F 75%, #BB5F0C 100%);
+
+	--color1-hover: linear-gradient(135deg, #904B16 0%, #904B16 25%, #F9A83F 75%, #BB5F0C 100%);
+	--color2-hover: linear-gradient(135deg, #7F4415 0%, #7F4415 25%, #F9A83F 75%, #BB5F0C 100%);
+	--color3-hover: linear-gradient(135deg, #6F3C14 0%, #6F3C14 25%, #F9A83F 75%, #BB5F0C 100%);
+	--color4-hover: linear-gradient(135deg, #5F3413 0%, #5F3413 25%, #F9A83F 75%, #BB5F0C 100%);
+}
+
+form#escalas > .escala > input {
+	position: absolute;
+	left: -1000000px;
+}
+
+form#escalas > .escala > label {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+	border-radius: 15px;
+	cursor: pointer;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	
+	font-family: var(--fuente-principal);
+	font-weight: 700;
+	font-size: 4rem;
+	
+	box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+	
+	background-size: 400% 400%;
+	background-repeat: no-repeat;
+	transition: .5s all;
+}
+form#escalas > .escala[activa] > label {background-position: 100% 100%;}
+
+form#escalas > .escala:nth-of-type(1) > label {background-image: var(--color1);}
+form#escalas > .escala:nth-of-type(2) > label {background-image: var(--color2);}
+form#escalas > .escala:nth-of-type(3) > label {background-image: var(--color3);}
+form#escalas > .escala:nth-of-type(4) > label {background-image: var(--color4);}
+form#escalas > .escala:nth-of-type(1) > label:hover {background-image: var(--color1-hover);}
+form#escalas > .escala:nth-of-type(2) > label:hover {background-image: var(--color2-hover);}
+form#escalas > .escala:nth-of-type(3) > label:hover {background-image: var(--color3-hover);}
+form#escalas > .escala:nth-of-type(4) > label:hover {background-image: var(--color4-hover);}
