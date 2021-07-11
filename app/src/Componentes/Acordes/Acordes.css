@@ -47,6 +47,10 @@ form#acordes > .acorde > label {
 	font-weight: 700;
 	font-size: 4rem;
 	
+	box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+	
 	background-size: 400% 400%;
 	background-repeat: no-repeat;
 	transition: .5s all;
