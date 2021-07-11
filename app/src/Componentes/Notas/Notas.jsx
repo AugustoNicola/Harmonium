@@ -5,45 +5,20 @@ import DataNotas from "../../Data/DataNotas.json";
 import "./Notas.css";
 
 const Notas = () => {
+	
 	return (
-		<div className="notas">	
-			<div className="nota">
-				<h3>C</h3>
-			</div>
-			<div className="nota">
-				<h3>C&#9839;</h3>
-			</div>
-			<div className="nota">
-				<h3>D</h3>
-			</div>
-			<div className="nota">
-				<h3>D&#9839;</h3>
-			</div>
-			<div className="nota">
-				<h3>E</h3>
-			</div>
-			<div className="nota">
-				<h3>F</h3>
-			</div>
-			<div className="nota">
-				<h3>F&#9839;</h3>
-			</div>
-			<div className="nota">
-				<h3>G</h3>
-			</div>
-			<div className="nota">
-				<h3>G&#9839;</h3>
-			</div>
-			<div className="nota">
-				<h3>A</h3>
-			</div>
-			<div className="nota">
-				<h3>A&#9839;</h3>
-			</div>
-			<div className="nota">
-				<h3>B</h3>
-			</div>
-		</div>
+		<form id="notas">
+		{
+			DataNotas.map((nota) => {
+				return (
+					<div className="nota" key={nota.posicion}>
+						<input type="radio" name="notaSeleccionada" id={nota.posicion} value={nota.posicion} />
+						<label htmlFor={nota.posicion}>{nota.nombre}</label>
+					</div>
+				);
+			})
+		}
+		</form>
 	)
 }
 

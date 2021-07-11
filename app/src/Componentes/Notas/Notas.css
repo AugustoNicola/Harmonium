@@ -1,10 +1,10 @@
-.notas {
+form#notas {
 	flex: 30% 0;
 	width: 100%;
 	
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: 2rem;
+	gap: 1rem;
 	
 	/* * varibales de colores para notas */
 	--color1: linear-gradient(135deg, #29D2C7 0%, #29D2C7 25%, #2DF986 75%, #0EF6F5 100%);
@@ -18,32 +18,38 @@
 	--color4-hover: linear-gradient(135deg, #1F736E 0%, #1F736E 25%, #2DF986 75%, #0EF6F5 100%);
 }
 
-.notas > .nota {
+form#notas > .nota > input {
+	position: absolute;
+	left: -1000000px;
+}
+
+form#notas > .nota > label {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+	border-radius: 15px;
+	cursor: pointer;
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	
-	border-radius: 15px;
-	
-	cursor: pointer;
+	font-family: var(--fuente-principal);
+	font-weight: 700;
+	font-size: 5rem;
 	
 	background-size: 400% 400%;
 	background-repeat: no-repeat;
 	transition: .5s all;
 }
-.notas > .nota.activa {background-position: 100% 100%;}
+form#notas > .nota[activa] > label {background-position: 100% 100%;}
 
-.notas > .nota:nth-of-type(4n+1) {background-image: var(--color1);}
-.notas > .nota:nth-of-type(4n+2) {background-image: var(--color2);}
-.notas > .nota:nth-of-type(4n+3) {background-image: var(--color3);}
-.notas > .nota:nth-of-type(4n+4) {background-image: var(--color4);}
-.notas > .nota:nth-of-type(4n+1):hover {background-image: var(--color1-hover);}
-.notas > .nota:nth-of-type(4n+2):hover {background-image: var(--color2-hover);}
-.notas > .nota:nth-of-type(4n+3):hover {background-image: var(--color3-hover);}
-.notas > .nota:nth-of-type(4n+4):hover {background-image: var(--color4-hover);}
-
-.notas > .nota > h3 {
-	font-size: 4.6rem;
-	font-family: var(--fuente-principal);
-	margin: 0;
-}
+form#notas > .nota:nth-of-type(4n+1) > label {background-image: var(--color1);}
+form#notas > .nota:nth-of-type(4n+2) > label {background-image: var(--color2);}
+form#notas > .nota:nth-of-type(4n+3) > label {background-image: var(--color3);}
+form#notas > .nota:nth-of-type(4n+4) > label {background-image: var(--color4);}
+form#notas > .nota:nth-of-type(4n+1) > label:hover {background-image: var(--color1-hover);}
+form#notas > .nota:nth-of-type(4n+2) > label:hover {background-image: var(--color2-hover);}
+form#notas > .nota:nth-of-type(4n+3) > label:hover {background-image: var(--color3-hover);}
+form#notas > .nota:nth-of-type(4n+4) > label:hover {background-image: var(--color4-hover);}

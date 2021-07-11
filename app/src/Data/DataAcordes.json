@@ -41,27 +41,27 @@
 	},
 	{
 		"posicion": 8,
-		"nombre": "maj7&#9839;5",
+		"nombre": "maj7\u266F5",
 		"distanciaNotas": [4, 8, 11]
 	},
 	{
 		"posicion": 9,
-		"nombre": "maj7&#x266D;5",
+		"nombre": "maj7\u266D5",
 		"distanciaNotas": [4, 6, 11]
 	},
 	{
 		"posicion": 10,
-		"nombre": "7&#9839;5",
+		"nombre": "7\u266F5",
 		"distanciaNotas": [4, 8, 10]
 	},
 	{
 		"posicion": 11,
-		"nombre": "7&#x266D;5",
+		"nombre": "7\u266D5",
 		"distanciaNotas": [4, 6, 10]
 	},
 	{
 		"posicion": 12,
-		"nombre": "m7&#x266D;5",
+		"nombre": "m7\u266D5",
 		"distanciaNotas": [3, 6, 10]
 	},
 	{

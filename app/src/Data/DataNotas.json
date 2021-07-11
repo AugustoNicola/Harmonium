@@ -5,7 +5,7 @@
 	},
 	{
 		"posicion": 1,
-		"nombre": "C&#9839;"
+		"nombre": "C\u266F"
 	},
 	{
 		"posicion": 2,
@@ -13,7 +13,7 @@
 	},
 	{
 		"posicion": 3,
-		"nombre": "D&#9839;"
+		"nombre": "D\u266F"
 	},
 	{
 		"posicion": 4,
@@ -25,7 +25,7 @@
 	},
 	{
 		"posicion": 6,
-		"nombre": "F&#9839;"
+		"nombre": "F\u266F"
 	},
 	{
 		"posicion": 7,
@@ -33,7 +33,7 @@
 	},
 	{
 		"posicion": 8,
-		"nombre": "G&#9839;"
+		"nombre": "G\u266F"
 	},
 	{
 		"posicion": 9,
@@ -41,7 +41,7 @@
 	},
 	{
 		"posicion": 10,
-		"nombre": "A&#9839;"
+		"nombre": "A\u266F"
 	},
 	{
 		"posicion": 11,
