@@ -1,0 +1,50 @@
+[
+	{
+		"posicion": 0,
+		"nombre": "C"
+	},
+	{
+		"posicion": 1,
+		"nombre": "C&#9839;"
+	},
+	{
+		"posicion": 2,
+		"nombre": "D"
+	},
+	{
+		"posicion": 3,
+		"nombre": "D&#9839;"
+	},
+	{
+		"posicion": 4,
+		"nombre": "E"
+	},
+	{
+		"posicion": 5,
+		"nombre": "F"
+	},
+	{
+		"posicion": 6,
+		"nombre": "F&#9839;"
+	},
+	{
+		"posicion": 7,
+		"nombre": "G"
+	},
+	{
+		"posicion": 8,
+		"nombre": "G&#9839;"
+	},
+	{
+		"posicion": 9,
+		"nombre": "A"
+	},
+	{
+		"posicion": 10,
+		"nombre": "A&#9839;"
+	},
+	{
+		"posicion": 11,
+		"nombre": "B"
+	}
+]

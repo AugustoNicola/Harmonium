@@ -1,5 +1,7 @@
 import React from 'react';
 
+import DataNotas from "../../Data/DataNotas.json";
+
 import "./Notas.css";
 
 const Notas = () => {

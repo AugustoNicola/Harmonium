@@ -2,6 +2,8 @@ import React from 'react';
 
 import "./Acordes.css";
 
+import DataAcordes from "../../Data/DataAcordes.json";
+
 const Acordes = () => {
 	return (
 		<div className="acordes">
