@@ -31,7 +31,7 @@
 	},
 	{
 		"posicion": 6,
-		"nombre": "m(maj7)",
+		"nombre": "m\nmaj7",
 		"distanciaNotas": [3, 7, 11]
 	},
 	{
@@ -41,27 +41,27 @@
 	},
 	{
 		"posicion": 8,
-		"nombre": "maj7\u266F5",
+		"nombre": "maj7\n\u266F5",
 		"distanciaNotas": [4, 8, 11]
 	},
 	{
 		"posicion": 9,
-		"nombre": "maj7\u266D5",
+		"nombre": "maj7\n\u266D5",
 		"distanciaNotas": [4, 6, 11]
 	},
 	{
 		"posicion": 10,
-		"nombre": "7\u266F5",
+		"nombre": "7\n\u266F5",
 		"distanciaNotas": [4, 8, 10]
 	},
 	{
 		"posicion": 11,
-		"nombre": "7\u266D5",
+		"nombre": "7\n\u266D5",
 		"distanciaNotas": [4, 6, 10]
 	},
 	{
 		"posicion": 12,
-		"nombre": "m7\u266D5",
+		"nombre": "m7\n\u266D5",
 		"distanciaNotas": [3, 6, 10]
 	},
 	{
@@ -81,12 +81,12 @@
 	},
 	{
 		"posicion": 16,
-		"nombre": "m(add2)",
+		"nombre": "m\nadd2",
 		"distanciaNotas": [2, 3, 7]
 	},
 	{
 		"posicion": 17,
-		"nombre": "m(add4)",
+		"nombre": "m\nadd4",
 		"distanciaNotas": [3, 5, 7]
 	},
 	{
