@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import Header from "./Componentes/Header/Header";
@@ -15,6 +15,11 @@ import './normalize.css';
 import './App.css';
 
 const App = () => {
+	const nota = useState(null);
+	const acorde = useState(null);
+	const escala = useState(null);
+	const inversion = useState(null);
+	
 	return (
 		<Router>
 			<div className="app">
@@ -28,14 +33,18 @@ const App = () => {
 							<div className="main-selectores">
 								<h1>Elegí una nota tónica y un tipo para formar un acorde</h1>
 								<div className="contenedor-selectores">
-									<Notas />
+									<Notas notaSeleccionada={nota[0]} setNota={nota[1]} />
 									
 									<Switch>
-										<Route exact path="/acordes" component={Acordes} />
-										<Route exact path="/escalas" component={Escalas} />
+										<Route exact path="/acordes">
+											<Acordes acordeSeleccionado={acorde[0]} setAcorde={acorde[1]} setNota={nota[1]} />
+										</Route>
+										<Route exact path="/escalas">
+											<Escalas escalaSeleccionada={escala[0]} setEscala={escala[1]} setNota={nota[1]} />
+										</Route>
 									</Switch>
 									
-									<Opciones />
+									<Opciones inversionSeleccionada={inversion[0]} setInversion={inversion[1]} />
 								</div>
 							</div>
 						</Route>

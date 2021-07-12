@@ -46,9 +46,9 @@ form#notas > .nota > label {
 	
 	background-size: 400% 400%;
 	background-repeat: no-repeat;
-	transition: .5s all;
+	transition: .4s all;
 }
-form#notas > .nota[activa] > label {background-position: 100% 100%;}
+form#notas > .nota[activo] > label {background-position: 100% 100%;}
 
 form#notas > .nota:nth-of-type(4n+1) > label {background-image: var(--color1);}
 form#notas > .nota:nth-of-type(4n+2) > label {background-image: var(--color2);}

@@ -47,9 +47,9 @@ form#escalas > .escala > label {
 	
 	background-size: 400% 400%;
 	background-repeat: no-repeat;
-	transition: .5s all;
+	transition: .4s all;
 }
-form#escalas > .escala[activa] > label {background-position: 100% 100%;}
+form#escalas > .escala[activo] > label {background-position: 100% 100%;}
 
 form#escalas > .escala:nth-of-type(1) > label {background-image: var(--color1);}
 form#escalas > .escala:nth-of-type(2) > label {background-image: var(--color2);}

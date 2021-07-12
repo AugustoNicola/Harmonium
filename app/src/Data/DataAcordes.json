@@ -2,106 +2,127 @@
 	{
 		"posicion": 0,
 		"nombre": "M",
+		"label": "M",
 		"distanciaNotas": [4, 7]
 	},
 	{
 		"posicion": 1,
 		"nombre": "m",
+		"label": "m",
 		"distanciaNotas": [3, 7]
 	},
 	{
 		"posicion": 2,
 		"nombre": "dim",
+		"label": "dim",
 		"distanciaNotas": [3, 6]
 	},
 	{
 		"posicion": 3,
 		"nombre": "aug",
+		"label": "aug",
 		"distanciaNotas": [4, 8]
 	},
 	{
 		"posicion": 4,
 		"nombre": "maj7",
+		"label": "maj7",
 		"distanciaNotas": [4, 7, 11]
 	},
 	{
 		"posicion": 5,
 		"nombre": "7",
+		"label": "7",
 		"distanciaNotas": [4, 7, 10]
 	},
 	{
 		"posicion": 6,
-		"nombre": "m\nmaj7",
+		"nombre": "mmaj7",
+		"label": "m\nmaj7",
 		"distanciaNotas": [3, 7, 11]
 	},
 	{
 		"posicion": 7,
 		"nombre": "m7",
+		"label": "m7",
 		"distanciaNotas": [3, 7, 10]
 	},
 	{
 		"posicion": 8,
-		"nombre": "maj7\n\u266F5",
+		"nombre": "maj7s5",
+		"label": "maj7\n\u266F5",
 		"distanciaNotas": [4, 8, 11]
 	},
 	{
 		"posicion": 9,
-		"nombre": "maj7\n\u266D5",
+		"nombre": "maj7b5",
+		"label": "maj7\n\u266D5",
 		"distanciaNotas": [4, 6, 11]
 	},
 	{
 		"posicion": 10,
-		"nombre": "7\n\u266F5",
+		"nombre": "7s5",
+		"label": "7\n\u266F5",
 		"distanciaNotas": [4, 8, 10]
 	},
 	{
 		"posicion": 11,
-		"nombre": "7\n\u266D5",
+		"nombre": "7b5",
+		"label": "7\n\u266D5",
 		"distanciaNotas": [4, 6, 10]
 	},
 	{
 		"posicion": 12,
-		"nombre": "m7\n\u266D5",
+		"nombre": "m7b5",
+		"label": "m7\n\u266D5",
 		"distanciaNotas": [3, 6, 10]
 	},
 	{
 		"posicion": 13,
 		"nombre": "dim7",
+		"label": "dim7",
 		"distanciaNotas": [3, 6, 9]
 	},
 	{
 		"posicion": 14,
 		"nombre": "add2",
+		"label": "add2",
 		"distanciaNotas": [2, 4, 7]
 	},
 	{
 		"posicion": 15,
 		"nombre": "add4",
+		"label": "add4",
 		"distanciaNotas": [4, 5, 7]
 	},
 	{
 		"posicion": 16,
-		"nombre": "m\nadd2",
+		"nombre": "madd2",
+		"label": "m\nadd2",
 		"distanciaNotas": [2, 3, 7]
 	},
 	{
 		"posicion": 17,
-		"nombre": "m\nadd4",
+		"nombre": "madd4",
+		"label": "m\nadd4",
 		"distanciaNotas": [3, 5, 7]
 	},
 	{
 		"posicion": 18,
 		"nombre": "sus2",
+		"label": "sus2",
 		"distanciaNotas": [2, 7]
 	},
 	{
 		"posicion": 19,
 		"nombre": "sus4",
+		"label": "sus4",
 		"distanciaNotas": [5, 7]
 	},
 	{
 		"posicion": 20,
 		"nombre": "5",
+		"label": "5",
 		"distanciaNotas": [7]
 	}
 ]

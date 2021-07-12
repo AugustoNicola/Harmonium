@@ -53,7 +53,7 @@ form#acordes > .acorde > label {
 	
 	background-size: 400% 400%;
 	background-repeat: no-repeat;
-	transition: .5s all;
+	transition: .4s all;
 }
 form#acordes > .acorde[activo] > label {background-position: 100% 100%;}
 

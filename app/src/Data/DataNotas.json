@@ -1,50 +1,62 @@
 [
 	{
 		"posicion": 0,
-		"nombre": "C"
+		"nombre": "C",
+		"label": "C"
 	},
 	{
 		"posicion": 1,
-		"nombre": "C\u266F"
+		"nombre": "Cs",
+		"label": "C\u266F"
 	},
 	{
 		"posicion": 2,
-		"nombre": "D"
+		"nombre": "D",
+		"label": "D"
 	},
 	{
 		"posicion": 3,
-		"nombre": "D\u266F"
+		"nombre": "Ds",
+		"label": "D\u266F"
 	},
 	{
 		"posicion": 4,
-		"nombre": "E"
+		"nombre": "E",
+		"label": "E"
 	},
 	{
 		"posicion": 5,
-		"nombre": "F"
+		"nombre": "F",
+		"label": "F"
 	},
 	{
 		"posicion": 6,
-		"nombre": "F\u266F"
+		"nombre": "Fs",
+		"label": "F\u266F"
 	},
 	{
 		"posicion": 7,
-		"nombre": "G"
+		"nombre": "G",
+		"label": "G"
 	},
 	{
 		"posicion": 8,
-		"nombre": "G\u266F"
+		"nombre": "Gs",
+		"label": "G\u266F"
 	},
 	{
 		"posicion": 9,
-		"nombre": "A"
+		"nombre": "A",
+		"label": "A"
 	},
 	{
 		"posicion": 10,
-		"nombre": "A\u266F"
+		"nombre": "As",
+		"label": "A\u266F"
 	},
 	{
 		"posicion": 11,
-		"nombre": "B"
+		"nombre": "B",
+		"label": "B"
 	}
 ]
