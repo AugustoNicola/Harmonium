@@ -5,7 +5,9 @@ import "./Opciones.css";
 const Opciones = () => {
 	return (
 		<div className="opciones">
-			opciones
+			<div className="label">Cmaj7</div>
+			<button className="invertir">Invertir</button>
+			<button className="tocar">Tocar</button>
 		</div>
 	)
 }

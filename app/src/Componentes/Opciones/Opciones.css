@@ -1,5 +1,73 @@
 .opciones {
-	background-color: darkorchid;
-	
 	flex: 10% 0;
+	width: 100%;
+	
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+	
+	/* * varibales de colores para notas */
+	--color1: #00C7E9;
+	--color2: #04B8D7;
+	--color3: #07A9C5;
+	
+	--color1-fondo: #8ED8E5;
+	--color2-hover: #098FA6;
+	--color3-hover: #0A8398;
+	
+	--color-disabled: #65AEBB;
+}
+
+.opciones > .label {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+	border-radius: 15px;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	
+	font-family: var(--fuente-principal);
+	font-weight: 700;
+	font-size: 4rem;
+	
+	background-color: var(--color1-fondo);
+}
+
+.opciones > button {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+	border-radius: 15px;
+	cursor: pointer;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	
+	font-family: var(--fuente-principal);
+	font-weight: 700;
+	font-size: 4rem;
+	
+	box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 10px 10px 10px -5px rgba(0,0,0,0.5);
+}
+
+.opciones > .label {border: 7px solid var(--color1);}
+
+.opciones > button:nth-of-type(1) {background-color: var(--color2);}
+.opciones > button:nth-of-type(2) {background-color: var(--color3);}
+.opciones > button:nth-of-type(1):hover {background-color: var(--color2-hover);}
+.opciones > button:nth-of-type(2):hover {background-color: var(--color3-hover);}
+
+.opciones > button:disabled, .opciones > button:disabled:hover {
+	background-color: var(--color-disabled);
+	cursor: not-allowed;
 }
