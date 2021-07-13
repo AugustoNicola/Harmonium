@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import Header from "./Componentes/Header/Header";
 import Inicio from "./Componentes/Inicio/Inicio";
+import Encabezado from "./Componentes/Encabezado/Encabezado";
 import Notas from "./Componentes/Notas/Notas";
 import Acordes from "./Componentes/Acordes/Acordes";
 import Escalas from "./Componentes/Escalas/Escalas";
@@ -31,8 +32,8 @@ const App = () => {
 						
 						<Route exact path={["/acordes", "/escalas"]}>
 							<div className="main-selectores">
-								<h1>Elegí una nota tónica y un tipo para formar un acorde</h1>
-								<div className="contenedor-selectores">
+								<Encabezado />
+								<div className="contenedor-selectores" data-transicion style={{animationDelay: "0.4s"}}>
 									<Notas notaSeleccionada={nota[0]} setNota={nota[1]} />
 									
 									<Switch>
