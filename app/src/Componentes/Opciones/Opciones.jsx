@@ -14,7 +14,7 @@ const Opciones = ({inversionSeleccionada, setInversion, nota, acorde, escala}) =
 	useEffect(() => {
 		if(nota && acorde)
 		{
-			setLabel(`\n\n${DataNotas[nota].label}\n${DataAcordes[acorde].label}`);
+			setLabel(`\n\n${DataNotas[nota].label} ${DataAcordes[acorde].label}`);
 			setInvertirDisponible(true);
 			setTocarDisponible(true);
 		} else if(nota && escala)

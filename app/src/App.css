@@ -65,13 +65,12 @@ h1 {
 .main {
 	flex: 100% 1 1;
 	
-	display: flex;
-	flex-flow: column nowrap;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-rows: 6fr 4fr;
 }
 
 .main-selectores {
-	flex: 60% 1 1;
-	
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
