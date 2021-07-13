@@ -14,8 +14,8 @@ const Notas = ({notaSeleccionada, setNota}) => {
 		{
 			DataNotas.map((nota) => {
 				return (
-					<div className="nota" key={nota.posicion} activo={nota.nombre === notaSeleccionada ? "true" : undefined}>
-						<input type="radio" name="notaSeleccionada" id={nota.nombre} value={nota.nombre} onChange={cambioNota} />
+					<div className="nota" key={nota.posicion} activo={nota.posicion == notaSeleccionada ? "yes" : undefined}>
+						<input type="radio" name="notaSeleccionada" id={nota.nombre} value={nota.posicion} onChange={cambioNota} />
 						<label htmlFor={nota.nombre}>{nota.label}</label>
 					</div>
 				);

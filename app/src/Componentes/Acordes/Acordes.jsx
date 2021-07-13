@@ -18,8 +18,8 @@ const Acordes = ({acordeSeleccionado, setAcorde, setNota}) => {
 		{
 			DataAcordes.map((acorde) => {
 				return (
-					<div className="acorde" key={acorde.posicion} activo={acorde.nombre === acordeSeleccionado ? "true" : undefined}>
-						<input type="radio" name="acordeSeleccionado" id={acorde.nombre} value={acorde.nombre} onChange={cambioAcorde} />
+					<div className="acorde" key={acorde.posicion} activo={acorde.posicion == acordeSeleccionado ? "yes" : undefined}>
+						<input type="radio" name="acordeSeleccionado" id={acorde.nombre} value={acorde.posicion} onChange={cambioAcorde} />
 						<label htmlFor={acorde.nombre}>{acorde.label}</label>
 					</div>
 				);

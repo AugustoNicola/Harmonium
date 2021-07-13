@@ -44,7 +44,13 @@ const App = () => {
 										</Route>
 									</Switch>
 									
-									<Opciones inversionSeleccionada={inversion[0]} setInversion={inversion[1]} />
+									<Opciones 
+										inversionSeleccionada={inversion[0]}
+										setInversion={inversion[1]}
+										nota={nota[0]}
+										acorde={acorde[0]}
+										escala={escala[0]}
+									/>
 								</div>
 							</div>
 						</Route>
