@@ -1,25 +1,25 @@
 [
 	{
 		"posicion": 0,
-		"nombre": "Mayor",
+		"nombre": " Mayor",
 		"label": "Mayor",
 		"distanciaNotas": [2, 2, 1, 2, 2, 2, 1]
 	},
 	{
 		"posicion": 1,
-		"nombre": "Antigua",
+		"nombre": "m Antigua",
 		"label": "Antigua",
 		"distanciaNotas": [2, 1, 2, 2, 1, 2, 2]
 	},
 	{
 		"posicion": 2,
-		"nombre": "Armónica",
+		"nombre": "m Armónica",
 		"label": "Armónica",
 		"distanciaNotas": [2, 1, 2, 2, 1, 3, 1]
 	},
 	{
 		"posicion": 3,
-		"nombre": "Bachiana",
+		"nombre": "m Bachiana",
 		"label": "Bachiana",
 		"distanciaNotas": [2, 1, 2, 2, 2, 2, 1]
 	}

@@ -19,8 +19,8 @@ const Escalas = ({escalaSeleccionada, setEscala, setNota}) => {
 			DataEscalas.map((escala) => {
 				return (
 					<div className="escala" key={escala.posicion} activo={escala.posicion == escalaSeleccionada ? "yes" : undefined}>
-						<input type="radio" name="acordeSeleccionado" id={escala.nombre} value={escala.posicion} onChange={cambioEscala} />
-						<label htmlFor={escala.nombre}>{escala.label}</label>
+						<input type="radio" name="acordeSeleccionado" id={escala.label} value={escala.posicion} onChange={cambioEscala} />
+						<label htmlFor={escala.label}>{escala.label}</label>
 					</div>
 				);
 			})
