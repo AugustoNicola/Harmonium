@@ -5,6 +5,13 @@
 	display: flex;
 	flex-flow: row nowrap;
 	position: relative;
+	
+	--color-nota-natural-marcada: #69CEC8;
+	--color-nota-accidental-marcada: #579B97;
+	--color-nota-natural-activa: #31BCB3;
+	--color-nota-accidental-activa: #2B7F7A;
+	--color-nota-natural-marcada-activa: #31BCB3;
+	--color-nota-accidental-marcada-activa: #2B7F7A;
 }
 
 .piano > .grupo {
@@ -34,4 +41,28 @@
 	border-bottom-left-radius: 1.25rem;
 	border-bottom-right-radius: 1.25rem;
 	cursor: pointer;
+}
+
+/* * =========== COLORES NOTAS =========== */
+.piano > .grupo > .nota.natural.marcada {
+	background-color: var(--color-nota-natural-marcada);
+}
+.piano > .grupo > .nota.natural.activa {
+	background-color: var(--color-nota-natural-activa);
+}
+.piano > .grupo > .nota.natural.marcada.activa {
+	background-color: var(--color-nota-natural-marcada-activa);
+}
+
+.piano > .grupo > .nota.accidental.marcada {
+	background: none;
+	background-color: var(--color-nota-accidental-marcada);
+}
+.piano > .grupo > .nota.accidental.activa {
+	background: none;
+	background-color: var(--color-nota-accidental-activa);
+}
+.piano > .grupo > .nota.accidental.marcada.activa {
+	background: none;
+	background-color: var(--color-nota-accidental-marcada-activa);
 }
