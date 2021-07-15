@@ -1,5 +1,37 @@
 .piano {
-	background-image: url("../../media/dummy\ piano.jpg");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	width: 100vw;
+	height: 100%;
+	
+	display: flex;
+	flex-flow: row nowrap;
+	position: relative;
+}
+
+.piano > .grupo {
+	flex-grow: 1;
+	position: relative;
+}
+
+.piano > .grupo > .nota.natural {
+	width: 100%;
+	height: 100%;
+	
+	background-color: #f6f5f3;
+	border: 1px solid #888888;
+	cursor: pointer;
+}
+
+.piano > .grupo > .nota.accidental {
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	right: -37.5%;
+	width: 75%;
+	height: 58%;
+	
+	
+	background: linear-gradient(to top, #3d3d3d, #323232, #3d3d3d);
+	border-bottom-left-radius: 1.25rem;
+	border-bottom-right-radius: 1.25rem;
+	cursor: pointer;
 }
