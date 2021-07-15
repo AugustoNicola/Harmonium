@@ -1,63 +1,23 @@
 import React from 'react';
 
+import ProveedorSonido from "./ProveedorSonido";
+import ProveedorPiano from "./ProveedorPiano";
 import "./Piano.css";
+
+const contextoAudio = new (window.AudioContext || window.webkitAudioContext)();
 
 const Piano = () => {
 	return (
-		<div className="piano" data-transicion style={{animationDelay: "0.6s"}}>
-			<div className="grupo">
-				<div className="nota natural"></div>
-				<div className="nota accidental"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-				<div className="nota accidental"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-				<div className="nota accidental"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-				<div className="nota accidental"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-				<div className="nota accidental"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-				<div className="nota accidental"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-				<div className="nota accidental"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-				<div className="nota accidental"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-				<div className="nota accidental"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-				<div className="nota accidental"></div>
-			</div>
-			<div className="grupo">
-				<div className="nota natural"></div>
-			</div>
-		</div>
+		<ProveedorSonido
+			contextoAudio={contextoAudio}
+			render={({tocarNota, pararNota, pararTodasLasNotas}) => (
+				<ProveedorPiano
+					tocarNota={tocarNota}
+					pararNota={pararNota}
+					pararTodasLasNotas={pararTodasLasNotas}
+				/>
+			)}
+		/>
 	)
 }
 
