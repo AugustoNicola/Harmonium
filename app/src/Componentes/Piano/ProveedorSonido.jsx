@@ -13,7 +13,7 @@ const ProveedorSonido = ({contextoAudio, render}) => {
 		}).then(instrumento => {
 			setInstrumento(instrumento)
 		});
-	}, []);
+	}, [contextoAudio]);
 	
 	const tocarNota = (numeroMIDI) => {
 		contextoAudio.resume().then(() => {

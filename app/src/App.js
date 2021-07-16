@@ -20,6 +20,7 @@ const App = () => {
 	const acorde = useState(null);
 	const escala = useState(null);
 	const inversion = useState(null);
+	const notaInversion = useState(null);
 	
 	return (
 		<Router>
@@ -48,6 +49,8 @@ const App = () => {
 									<Opciones 
 										inversionSeleccionada={inversion[0]}
 										setInversion={inversion[1]}
+										notaInversion={notaInversion[0]}
+										not
 										nota={nota[0]}
 										acorde={acorde[0]}
 										escala={escala[0]}
@@ -59,7 +62,13 @@ const App = () => {
 						<Route path="*" component={NoEncontrado} />
 					</Switch>
 					
-					<Piano />
+					<Piano
+						nota={nota[0]}
+						acorde={acorde[0]}
+						escala={escala[0]}
+						inversion={inversion[0]}
+						setNotaInversion={notaInversion[1]}
+					/>
 				</main>
 				<Footer />
 			</div>
