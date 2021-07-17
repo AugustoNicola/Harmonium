@@ -10,6 +10,7 @@ const ProveedorSonido = ({contextoAudio, render}) => {
 		Soundfont.instrument(contextoAudio, "acoustic_grand_piano", {
 			format: "mp3",
 			soundfont: "MusyngKite",
+			gain: 3
 		}).then(instrumento => {
 			setInstrumento(instrumento)
 		});

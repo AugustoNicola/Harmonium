@@ -14,17 +14,25 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 	useEffect(() => {
 		let notasAMarcar = [];
 		
-		// # Seleccion de notas de la especie
+		// # Desmarcar y destocar todas las notas
+		document.querySelectorAll(".nota").forEach(nota => {
+			nota.classList.remove("marcada");
+			nota.classList.remove("activa");
+		});
+		pararTodasLasNotas();
+		
+		
 		if(nota && acorde)
 		{
-			// * acorde
+			// * ==== ACORDE ====
+			// # Seleccion de notas del acorde
 			notasAMarcar = [parseInt(nota)];
 			DataAcordes[acorde].distanciaNotas.forEach(distanciaNotaAcorde => {
 				notasAMarcar = [...notasAMarcar, parseInt(nota) + parseInt(distanciaNotaAcorde)];
 			});
+			// # inversiones de notas
 			if(inversion)
 			{
-				//* inversiones de notas
 				for (let indice = 0; indice < inversion; indice++) {
 					let notaAInvertir = notasAMarcar.shift();
 					notasAMarcar = [...notasAMarcar, (notaAInvertir + 12)];
@@ -36,32 +44,50 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 				}
 				//todo setNotaInversion(DataNotas[notasAMarcar[0]].label);
 			}
+			
+			// # marcar y tocar las notas del acorde simultaneamente
+			notasAMarcar.forEach(nota => {
+				let notaDOM = document.querySelector(`[data-nota="${nota}"]`);
+				notaDOM.classList.add("activa");
+			});
+			
+			notasAMarcar.forEach(nota => {
+				tocarNota(valoresMIDI[nota])
+			});
 		} else if(nota && escala)
 		{
-			// * escala
+			// * ==== ESCALA ====
+			// # seleccion de notas de la escala
 			notasAMarcar = [parseInt(nota)];
 			DataEscalas[escala].distanciaNotas.forEach(distanciaNotaEscala => {
 				notasAMarcar = [...notasAMarcar, parseInt(nota) + parseInt(distanciaNotaEscala)];
+			});
+			
+			// # marcar todas las notas pero tocar y activar en orden
+			notasAMarcar.forEach((nota, indice) => {
+				let notaDOM = document.querySelector(`[data-nota="${nota}"]`);
+				notaDOM.classList.add("marcada");
+				
+				setTimeout(() => {
+					tocarNota(valoresMIDI[nota]);
+					notaDOM.classList.add("activa");
+					if(indice != 0)
+					{
+						document.querySelector(`[data-nota="${notasAMarcar[indice - 1]}"]`).classList.remove("activa");
+						pararNota(valoresMIDI[notasAMarcar[indice - 1]])
+					}
+				}, 350 * indice);
+				if(indice == notasAMarcar.length - 1)
+				{
+					setTimeout(() => {
+						document.querySelector(`[data-nota="${notasAMarcar[indice]}"]`).classList.remove("activa");
+					}, 350 * (indice + 1));
+				}
 			});
 		} else {
 			// * no hay notas para marcar
 			notasAMarcar = [];
 		}
-		
-		// # Marcar las notas en la estructura
-		document.querySelectorAll(".nota").forEach(nota => {
-			nota.classList.remove("marcada");
-		})
-		notasAMarcar.forEach(nota => {
-			let notaDOM = document.querySelector(`[data-nota="${nota}"]`);
-			notaDOM.classList.add("marcada");
-		});
-		
-		// # Tocar las notas
-		pararTodasLasNotas();
-		notasAMarcar.forEach(nota => {
-			tocarNota(valoresMIDI[nota])
-		});
 	}, [nota, acorde, escala, inversion])
 	
 	return (
@@ -116,7 +142,7 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 					<div className="nota accidental" data-nota={22}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural"></div>
+					<div className="nota natural" data-nota={23}></div>
 				</div>
 			</div>
 	)
