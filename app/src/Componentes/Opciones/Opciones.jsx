@@ -6,7 +6,7 @@ import DataEscalas from "../../Data/DataEscalas.json";
 
 import "./Opciones.css";
 
-const Opciones = ({inversionSeleccionada, setInversion, nota, acorde, escala}) => {
+const Opciones = ({nota, acorde, escala, numeroInversionesDisponibles, indiceInversion, setIndiceInversion, nombreNotaInversion}) => {
 	const [label, setLabel] = useState(null);
 	const [invertirDisponible, setInvertirDisponible] = useState(false);
 	const [tocarDisponible, setTocarDisponible] = useState(false);
@@ -14,7 +14,9 @@ const Opciones = ({inversionSeleccionada, setInversion, nota, acorde, escala}) =
 	useEffect(() => {
 		if(nota && acorde)
 		{
-			setLabel(`${DataNotas[nota].label}${DataAcordes[acorde].label}`);
+			nombreNotaInversion ? 
+				setLabel(`${DataNotas[nota].label}${DataAcordes[acorde].label}/${nombreNotaInversion}`) :
+				setLabel(`${DataNotas[nota].label}${DataAcordes[acorde].label}`);
 			setInvertirDisponible(true);
 			setTocarDisponible(true);
 		} else if(nota && escala)
@@ -27,12 +29,16 @@ const Opciones = ({inversionSeleccionada, setInversion, nota, acorde, escala}) =
 			setInvertirDisponible(false);
 			setTocarDisponible(false);
 		}
-	}, [nota, acorde, escala, inversionSeleccionada])
+	}, [nota, acorde, escala, nombreNotaInversion])
+	
+	const cambioInversion = () => {
+		setIndiceInversion(indiceInversion == numeroInversionesDisponibles ? 0 : (indiceInversion + 1));
+	};
 	
 	return (
 		<div className="opciones">
 			<div className="label">{label}</div>
-			<button className="invertir" disabled={!invertirDisponible ? "yes" : undefined}>Invertir</button>
+			<button className="invertir" onClick={cambioInversion} disabled={!invertirDisponible ? "yes" : undefined}>Invertir</button>
 			<button className="tocar" disabled={!tocarDisponible ? "yes" : undefined}>Tocar</button>
 		</div>
 	)

@@ -19,8 +19,10 @@ const App = () => {
 	const nota = useState(null);
 	const acorde = useState(null);
 	const escala = useState(null);
-	const inversion = useState(null);
-	const notaInversion = useState(null);
+	
+	const numeroInversionesDisponibles = useState(null);
+	const indiceInversion = useState(null);
+	const nombreNotaInversion = useState(null);
 	
 	return (
 		<Router>
@@ -39,21 +41,32 @@ const App = () => {
 									
 									<Switch>
 										<Route exact path="/acordes">
-											<Acordes acordeSeleccionado={acorde[0]} setAcorde={acorde[1]} setNota={nota[1]} />
+											<Acordes
+												acordeSeleccionado={acorde[0]}
+												setAcorde={acorde[1]}
+												setNota={nota[1]}
+												setIndiceInversion={indiceInversion[1]}
+											/>
 										</Route>
 										<Route exact path="/escalas">
-											<Escalas escalaSeleccionada={escala[0]} setEscala={escala[1]} setNota={nota[1]} />
+											<Escalas
+												escalaSeleccionada={escala[0]}
+												setEscala={escala[1]}
+												setNota={nota[1]}
+												setIndiceInversion={indiceInversion[1]}
+											/>
 										</Route>
 									</Switch>
 									
 									<Opciones 
-										inversionSeleccionada={inversion[0]}
-										setInversion={inversion[1]}
-										notaInversion={notaInversion[0]}
-										not
 										nota={nota[0]}
 										acorde={acorde[0]}
 										escala={escala[0]}
+										
+										numeroInversionesDisponibles={numeroInversionesDisponibles[0]}
+										indiceInversion={indiceInversion[0]}
+										setIndiceInversion={indiceInversion[1]}
+										nombreNotaInversion={nombreNotaInversion[0]}
 									/>
 								</div>
 							</div>
@@ -66,8 +79,10 @@ const App = () => {
 						nota={nota[0]}
 						acorde={acorde[0]}
 						escala={escala[0]}
-						inversion={inversion[0]}
-						setNotaInversion={notaInversion[1]}
+						
+						setNumeroInversionesDisponibles={numeroInversionesDisponibles[1]}
+						indiceInversion={indiceInversion[0]}
+						setNombreNotaInversion={nombreNotaInversion[1]}
 					/>
 				</main>
 				<Footer />

@@ -6,7 +6,7 @@ import "./Piano.css";
 
 const contextoAudio = new (window.AudioContext || window.webkitAudioContext)();
 
-const Piano = ({nota, acorde, escala, inversion}) => {
+const Piano = ({nota, acorde, escala, setNumeroInversionesDisponibles, indiceInversion, setNombreNotaInversion}) => {
 	return (
 		<ProveedorSonido
 			contextoAudio={contextoAudio}
@@ -19,7 +19,10 @@ const Piano = ({nota, acorde, escala, inversion}) => {
 					nota={nota}
 					acorde={acorde}
 					escala={escala}
-					inversion={inversion}
+					
+					setNumeroInversionesDisponibles={setNumeroInversionesDisponibles}
+					indiceInversion={indiceInversion}
+					setNombreNotaInversion={setNombreNotaInversion}
 				/>
 			)}
 		/>

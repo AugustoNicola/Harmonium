@@ -9,10 +9,12 @@ const valoresMIDI = [
 	"C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4"
 ]
 
-const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde, escala, inversion, setNotaInversion}) => {
+const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde, escala, setNumeroInversionesDisponibles, indiceInversion, setNombreNotaInversion}) => {
 	
 	useEffect(() => {
 		let notasAMarcar = [];
+		let numeroInversionesDisponibles = null;
+		let nombreNotaInversion = null;
 		
 		// # Desmarcar y destocar todas las notas
 		document.querySelectorAll(".nota").forEach(nota => {
@@ -20,7 +22,6 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 			nota.classList.remove("activa");
 		});
 		pararTodasLasNotas();
-		
 		
 		if(nota && acorde)
 		{
@@ -30,10 +31,12 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 			DataAcordes[acorde].distanciaNotas.forEach(distanciaNotaAcorde => {
 				notasAMarcar = [...notasAMarcar, parseInt(nota) + parseInt(distanciaNotaAcorde)];
 			});
+			numeroInversionesDisponibles = notasAMarcar.length - 1;
+			
 			// # inversiones de notas
-			if(inversion)
+			if(indiceInversion)
 			{
-				for (let indice = 0; indice < inversion; indice++) {
+				for (let indice = 0; indice < indiceInversion; indice++) {
 					let notaAInvertir = notasAMarcar.shift();
 					notasAMarcar = [...notasAMarcar, (notaAInvertir + 12)];
 					// ? bajar todo una octava para que alcance
@@ -42,7 +45,7 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 						notasAMarcar = notasAMarcar.map((nota) => {return nota - 12});
 					}
 				}
-				//todo setNotaInversion(DataNotas[notasAMarcar[0]].label);
+				nombreNotaInversion = DataNotas[notasAMarcar[0]].label;
 			}
 			
 			// # marcar y tocar las notas del acorde simultaneamente
@@ -88,7 +91,11 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 			// * no hay notas para marcar
 			notasAMarcar = [];
 		}
-	}, [nota, acorde, escala, inversion])
+		
+		// # Actualiza campos de inversion
+		setNumeroInversionesDisponibles(numeroInversionesDisponibles);
+		setNombreNotaInversion(nombreNotaInversion);
+	}, [nota, acorde, escala, indiceInversion])
 	
 	return (
 		<div className="piano" data-transicion style={{animationDelay: "0.6s"}}>

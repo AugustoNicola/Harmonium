@@ -4,13 +4,14 @@ import "./Acordes.css";
 
 import DataAcordes from "../../Data/DataAcordes.json";
 
-const Acordes = ({acordeSeleccionado, setAcorde, setNota}) => {
+const Acordes = ({acordeSeleccionado, setAcorde, setNota, setIndiceInversion}) => {
 	const cambioAcorde = (e) => {
 		setAcorde(e.target.value);
+		setIndiceInversion(0);
 	}
 	
 	useEffect(() => {
-		return function cleanup() { setAcorde(null); setNota(null); }
+		return function cleanup() { setAcorde(null); setNota(null); setIndiceInversion(0); }
 	}, [setAcorde, setNota])
 	
 	return (
