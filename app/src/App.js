@@ -24,6 +24,8 @@ const App = () => {
 	const indiceInversion = useState(null);
 	const nombreNotaInversion = useState(null);
 	
+	const toggle = useState(false);
+	
 	return (
 		<Router>
 			<div className="app">
@@ -67,6 +69,9 @@ const App = () => {
 										indiceInversion={indiceInversion[0]}
 										setIndiceInversion={indiceInversion[1]}
 										nombreNotaInversion={nombreNotaInversion[0]}
+										
+										toggle={toggle[0]}
+										setToggle={toggle[1]}
 									/>
 								</div>
 							</div>
@@ -83,6 +88,8 @@ const App = () => {
 						setNumeroInversionesDisponibles={numeroInversionesDisponibles[1]}
 						indiceInversion={indiceInversion[0]}
 						setNombreNotaInversion={nombreNotaInversion[1]}
+						
+						toggle={toggle[0]}
 					/>
 				</main>
 				<Footer />

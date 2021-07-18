@@ -6,7 +6,7 @@ import DataEscalas from "../../Data/DataEscalas.json";
 
 import "./Opciones.css";
 
-const Opciones = ({nota, acorde, escala, numeroInversionesDisponibles, indiceInversion, setIndiceInversion, nombreNotaInversion}) => {
+const Opciones = ({nota, acorde, escala, numeroInversionesDisponibles, indiceInversion, setIndiceInversion, nombreNotaInversion, toggle, setToggle}) => {
 	const [label, setLabel] = useState(null);
 	const [invertirDisponible, setInvertirDisponible] = useState(false);
 	const [tocarDisponible, setTocarDisponible] = useState(false);
@@ -35,11 +35,15 @@ const Opciones = ({nota, acorde, escala, numeroInversionesDisponibles, indiceInv
 		setIndiceInversion(indiceInversion == numeroInversionesDisponibles ? 0 : (indiceInversion + 1));
 	};
 	
+	const cambioTocar = () => {
+		setToggle(!toggle);
+	};
+	
 	return (
 		<div className="opciones">
 			<div className="label">{label}</div>
 			<button className="invertir" onClick={cambioInversion} disabled={!invertirDisponible ? "yes" : undefined}>Invertir</button>
-			<button className="tocar" disabled={!tocarDisponible ? "yes" : undefined}>Tocar</button>
+			<button className="tocar" onClick={cambioTocar} disabled={!tocarDisponible ? "yes" : undefined}>Tocar</button>
 		</div>
 	)
 }
