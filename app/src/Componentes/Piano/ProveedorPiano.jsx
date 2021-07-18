@@ -96,7 +96,7 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 		setNumeroInversionesDisponibles(numeroInversionesDisponibles);
 		setNombreNotaInversion(nombreNotaInversion);
 		// eslint-disable-next-line
-	}, [nota, acorde, escala, indiceInversion])
+	}, [nota, acorde, escala, indiceInversion, toggle])
 	
 	return (
 		<div className="piano" data-transicion style={{animationDelay: "0.6s"}}>
