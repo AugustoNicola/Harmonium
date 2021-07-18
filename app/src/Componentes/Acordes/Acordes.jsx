@@ -12,7 +12,7 @@ const Acordes = ({acordeSeleccionado, setAcorde, setNota, setIndiceInversion}) =
 	
 	useEffect(() => {
 		return function cleanup() { setAcorde(null); setNota(null); setIndiceInversion(0); }
-	}, [setAcorde, setNota])
+	}, [setAcorde, setNota, setIndiceInversion])
 	
 	return (
 		<form id="acordes">

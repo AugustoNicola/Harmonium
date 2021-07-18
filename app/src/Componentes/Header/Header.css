@@ -23,6 +23,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
+	height: 100%;
 }
 .header a.logo svg {
 	width: 6rem;
