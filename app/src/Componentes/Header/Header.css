@@ -28,6 +28,7 @@
 .header a.logo svg {
 	width: 6rem;
 	color: var(--color-blanco);
+	height: auto;
 }
 .header a.logo h2 {
 	font-family: var(--fuente-cursiva);
@@ -35,7 +36,14 @@
 	color: var(--color-blanco);
 	font-size: 3rem;
 }
-.header a.logo:hover svg, .header a.logo:hover h2 {color: var(--color-blanco-hover);}
+.header a.logo:hover svg,
+.header a.logo:focus svg,
+.header a.logo:active svg,
+.header a.logo:hover h2,
+.header a.logo:focus h2,
+.header a.logo:active h2 {
+	color: var(--color-blanco-hover);
+}
 
 .header .opciones-header {
 	width: 100%;
@@ -54,4 +62,30 @@
 	font-size: 2.4rem;
 	font-weight: 700;
 }
-.header .opciones-header .opcion:hover h2 {color: var(--color-blanco-hover);}
+.header .opciones-header .opcion:hover h2,
+.header .opciones-header .opcion:focus h2,
+.header .opciones-header .opcion:active h2 {
+	color: var(--color-blanco-hover);
+}
+
+@media screen and (max-width: 1000px) {
+	.header {
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.header a.logo {
+		position: unset;
+	}
+	
+	.header .opciones-header {
+		justify-content: space-around;
+		gap: unset;
+	}
+	
+	.header a.opcion h2 {
+		font-size: 2.8rem;
+		margin: 1rem;
+	}
+}
