@@ -78,6 +78,12 @@
 	.header a.logo {
 		position: unset;
 	}
+	.header a.logo svg {
+		width: 4.8rem;
+	}
+	.header a.logo h2 {
+		font-size: 2.6rem;
+	}
 	
 	.header .opciones-header {
 		justify-content: space-around;
@@ -85,7 +91,7 @@
 	}
 	
 	.header a.opcion h2 {
-		font-size: 2.8rem;
-		margin: 1rem;
+		font-size: 2.4rem;
+		margin: 0.8rem;
 	}
 }

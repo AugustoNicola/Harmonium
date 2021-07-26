@@ -48,6 +48,9 @@
 	-webkit-box-shadow: 10px 10px 57px -12px rgba(38,164,174,0.98);
 	-moz-box-shadow: 10px 10px 57px -12px rgba(38,164,174,0.98);
 }
+.inicio .opciones-inicio .opcion:active {
+	background-image: linear-gradient(135deg, var(--color-fondo-oscuro-hover) 0%, var(--color-fondo-oscuro) 25%, #2a5d5d 50%, #2CDFDF 75%, #3CBC9B 87.5%, #12948F 100%);
+}
 
 .inicio .opciones-inicio .opcion h2 {
 	font-family: var(--fuente-principal);
@@ -63,4 +66,23 @@
 	text-align: justify;
 	color: var(--color-blanco);
 	padding: 0 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+	.inicio {
+		padding: 0 1rem;
+		margin-bottom: 3rem;
+	}
+	
+	.inicio > p {
+		font-size: 1.9rem;
+	}
+	
+	.inicio > .opciones-inicio {
+		flex-flow: column nowrap;
+	}
+	
+	.inicio > .opciones-inicio > .opcion > p {
+		font-size: 2.2rem;
+	}
 }

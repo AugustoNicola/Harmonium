@@ -14,6 +14,7 @@
 	--color-blanco-hover: #e2e2e2;
 	
 	--color-fondo-oscuro: #444444;
+	--color-fondo-oscuro-hover: #2a2a2a;
 	
 	--fuente-principal: "Rubik", sans-serif;
 	--fuente-titulo: "Open Sans", sans-serif;
@@ -46,6 +47,11 @@ h1 {
 	color: var(--color-primario-titulo);
 	
 	margin: 1.2rem 0;
+}
+@media screen and (max-width: 1000px) {
+	h1 {	
+		font-size: 2.4rem;
+	}
 }
 
 /** ################## UTILIDADES ################## */
@@ -87,4 +93,10 @@ h1 {
 	justify-content: space-between;
 	align-items: stretch;
 	gap: 1.6rem;
+}
+
+@media screen and (max-width: 1000px) {
+	.main {
+		display: block;
+	}
 }
