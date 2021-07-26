@@ -43,6 +43,17 @@
 	cursor: pointer;
 }
 
+@media screen and (max-width: 1000px) {
+	.piano {
+		height: 35vw;
+	}
+	
+	.piano > .grupo > .nota.accidental {
+		border-bottom-left-radius: 0.70rem;
+		border-bottom-right-radius: 0.70rem;
+	}
+}
+
 /* * =========== COLORES NOTAS =========== */
 .piano > .grupo > .nota.natural.marcada {
 	background-color: var(--color-nota-natural-marcada);
