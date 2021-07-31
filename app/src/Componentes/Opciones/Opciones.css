@@ -65,8 +65,16 @@
 
 .opciones > button:nth-of-type(1) {background-color: var(--color2);}
 .opciones > button:nth-of-type(2) {background-color: var(--color3);}
-.opciones > button:nth-of-type(1):hover {background-color: var(--color2-hover);}
-.opciones > button:nth-of-type(2):hover {background-color: var(--color3-hover);}
+.opciones > button:nth-of-type(1):hover,
+.opciones > button:nth-of-type(1):active,
+.opciones > button:nth-of-type(1):focus {
+	background-color: var(--color2-hover);
+}
+.opciones > button:nth-of-type(2):hover,
+.opciones > button:nth-of-type(2):active,
+.opciones > button:nth-of-type(2):focus {
+	background-color: var(--color3-hover);
+}
 
 .opciones > button:disabled, .opciones > button:disabled:hover {
 	background-color: var(--color-disabled);
