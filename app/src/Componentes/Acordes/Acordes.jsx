@@ -6,8 +6,11 @@ import DataAcordes from "../../Data/DataAcordes.json";
 
 const Acordes = ({acordeSeleccionado, setAcorde, setNota, setIndiceInversion}) => {
 	const cambioAcorde = (e) => {
-		setAcorde(e.target.value);
-		setIndiceInversion(0);
+		if(e.target.value != "null")
+		{
+			setAcorde(e.target.value);
+			setIndiceInversion(0);
+		}
 	}
 	
 	useEffect(() => {
@@ -15,6 +18,8 @@ const Acordes = ({acordeSeleccionado, setAcorde, setNota, setIndiceInversion}) =
 	}, [setAcorde, setNota, setIndiceInversion])
 	
 	return (
+		window.innerWidth >= 1000 ? 
+		// * DESKTOP
 		<form id="acordes">
 		{
 			DataAcordes.map((acorde) => {
@@ -27,6 +32,22 @@ const Acordes = ({acordeSeleccionado, setAcorde, setNota, setIndiceInversion}) =
 			})
 		}
 		</form>
+		
+		:
+		
+		// * MOBILE 
+		<div className="selector-acordes">
+			<select name="acordes" id="acordes" onChange={cambioAcorde}>
+				<option value={"null"}> Especie </option>
+				{
+					DataAcordes.map((acorde) => {
+						return (
+							<option className="acorde" key={acorde.posicion} value={acorde.posicion}>{acorde.label}</option>
+						);
+					})
+				}
+			</select>
+		</div>
 	)
 }
 

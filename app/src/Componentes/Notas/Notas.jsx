@@ -6,10 +6,12 @@ import "./Notas.css";
 
 const Notas = ({notaSeleccionada, setNota}) => {
 	const cambioNota = (e) => {
-		setNota(e.target.value);
+		if(e.target.value != "null") setNota(e.target.value);
 	}
 	
 	return (
+		window.innerWidth >= 1000 ? 
+		// * DESKTOP
 		<form id="notas">
 		{
 			DataNotas.map((nota) => {
@@ -22,6 +24,22 @@ const Notas = ({notaSeleccionada, setNota}) => {
 			})
 		}
 		</form>
+		
+		: 
+		
+		// * MOBILE
+		<div className="selector-notas">
+			<select name="notas" id="notas" onChange={cambioNota}>
+				<option value={"null"}> Nota </option>
+				{
+					DataNotas.map((nota) => {
+						return (
+							<option className="nota" key={nota.posicion} value={nota.posicion}>{nota.label}</option>
+						);
+					})
+				}
+			</select>
+		</div>
 	)
 }
 

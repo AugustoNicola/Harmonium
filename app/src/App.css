@@ -99,4 +99,9 @@ h1 {
 	.main {
 		display: block;
 	}
+	
+	.main-selectores > .contenedor-selectores {
+		flex-flow: row wrap;
+		gap: 0.5rem;
+	}
 }

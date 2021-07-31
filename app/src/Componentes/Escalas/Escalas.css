@@ -1,3 +1,4 @@
+/* * ======== DESKTOP ======== * */
 form#escalas {
 	flex: 60% 0;
 	width: 100%;
@@ -59,3 +60,53 @@ form#escalas > .escala:nth-of-type(1) > label:hover {background-image: var(--col
 form#escalas > .escala:nth-of-type(2) > label:hover {background-image: var(--color2-hover);}
 form#escalas > .escala:nth-of-type(3) > label:hover {background-image: var(--color3-hover);}
 form#escalas > .escala:nth-of-type(4) > label:hover {background-image: var(--color4-hover);}
+
+/* * ======== MOBILE ======== * */
+
+.selector-escalas {
+	width: calc(50% - 0.25rem);
+
+	border: 2px solid #A8A8A8;
+	background-color: #AB5817;
+	color: #464646;
+	font-size: 3rem;
+	font-weight: bold;
+	font-family: var(--fuente-principal);
+
+	position: relative;
+
+	z-index: -1;
+}
+.selector-escalas:hover, 
+.selector-escalas:active,
+.selector-escalas:focus {
+	background-color: #844616;
+}
+
+.selector-escalas > select {
+	z-index: 1;
+	padding: 1rem;
+	width: 100%;
+	background-color: rgba(202, 202, 202, 0);
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	overflow: hidden;
+
+	outline: none;
+	border: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+}
+.selector-escalas::after {
+	content:"\f078";
+    font-family:'FontAwesome';
+    position: absolute;
+	display: inline-block;
+	font-size: 3rem;
+    top: 25%;
+    right: 10px;
+	z-index: -1;
+}
