@@ -1,7 +1,7 @@
 ![Harmonium](Logo.png)
 ### *Virtual piano app to learn about chords and scales*
 
-<br />
+### **Live demo: https://harmonium.netlify.app/**
 
 ![Screenshot](screenshot.png)
 
