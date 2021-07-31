@@ -58,10 +58,10 @@
 .piano > .grupo > .nota.natural.marcada {
 	background-color: var(--color-nota-natural-marcada);
 }
-.piano > .grupo > .nota.natural.activa {
+.piano > .grupo > .nota.natural.activa, .piano > .grupo > .nota.natural.activa-manual {
 	background-color: var(--color-nota-natural-activa);
 }
-.piano > .grupo > .nota.natural.marcada.activa {
+.piano > .grupo > .nota.natural.marcada.activa, .piano > .grupo > .nota.natural.marcada.activa-manual {
 	background-color: var(--color-nota-natural-marcada-activa);
 }
 
@@ -69,11 +69,11 @@
 	background: none;
 	background-color: var(--color-nota-accidental-marcada);
 }
-.piano > .grupo > .nota.accidental.activa {
+.piano > .grupo > .nota.accidental.activa, .piano > .grupo > .nota.accidental.activa-manual {
 	background: none;
 	background-color: var(--color-nota-accidental-activa);
 }
-.piano > .grupo > .nota.accidental.marcada.activa {
+.piano > .grupo > .nota.accidental.marcada.activa, .piano > .grupo > .nota.accidental.marcada.activa-manual {
 	background: none;
 	background-color: var(--color-nota-accidental-marcada-activa);
 }

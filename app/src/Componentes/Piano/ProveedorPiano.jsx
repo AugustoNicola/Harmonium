@@ -53,9 +53,6 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 			notasAMarcar.forEach(nota => {
 				let notaDOM = document.querySelector(`[data-nota="${nota}"]`);
 				notaDOM.classList.add("activa");
-			});
-			
-			notasAMarcar.forEach(nota => {
 				tocarNota(valoresMIDI[nota])
 			});
 		} else if(nota && escala)
@@ -99,59 +96,69 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 		// eslint-disable-next-line
 	}, [nota, acorde, escala, indiceInversion, toggle])
 	
+	const tocarNotaManual = e => {
+		e.target.classList.add("activa-manual");
+		tocarNota(valoresMIDI[e.target.getAttribute("data-nota")])
+	}
+	
+	const pararNotaManual = e => {
+		e.target.classList.remove("activa-manual");
+		pararNota(valoresMIDI[e.target.getAttribute("data-nota")])
+	}
+	
 	return (
 		<div className="piano" data-transicion style={{animationDelay: "0.6s"}}>
 				<div className="grupo">
-					<div className="nota natural" data-nota={0}></div>
-					<div className="nota accidental" data-nota={1}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={0}></div>
+					<div className="nota accidental" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={1}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={2}></div>
-					<div className="nota accidental" data-nota={3}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={2}></div>
+					<div className="nota accidental" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={3}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={4}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={4}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={5}></div>
-					<div className="nota accidental" data-nota={6}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={5}></div>
+					<div className="nota accidental" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={6}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={7}></div>
-					<div className="nota accidental" data-nota={8}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={7}></div>
+					<div className="nota accidental" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={8}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={9}></div>
-					<div className="nota accidental" data-nota={10}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={9}></div>
+					<div className="nota accidental" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={10}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={11}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={11}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={12}></div>
-					<div className="nota accidental" data-nota={13}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={12}></div>
+					<div className="nota accidental" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={13}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={14}></div>
-					<div className="nota accidental" data-nota={15}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={14}></div>
+					<div className="nota accidental" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={15}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={16}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={16}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={17}></div>
-					<div className="nota accidental" data-nota={18}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={17}></div>
+					<div className="nota accidental" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={18}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={19}></div>
-					<div className="nota accidental" data-nota={20}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={19}></div>
+					<div className="nota accidental" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={20}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={21}></div>
-					<div className="nota accidental" data-nota={22}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={21}></div>
+					<div className="nota accidental" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={22}></div>
 				</div>
 				<div className="grupo">
-					<div className="nota natural" data-nota={23}></div>
+					<div className="nota natural" onMouseDown={tocarNotaManual} onMouseUp={pararNotaManual} data-nota={23}></div>
 				</div>
 			</div>
 	)
