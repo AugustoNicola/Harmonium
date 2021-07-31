@@ -1,7 +1,13 @@
-# Harmonium
+![Harmonium](Logo.png)
 ### *Virtual piano app to learn about chords and scales*
 
-### [README en español acá :argentina: :mexico:](https://github.com/AugustoNicola/Panaderia-La-Esquina/blob/produccion/README.md)
+<br />
+
+![Screenshot](Screenshot.png)
+
+<br />
+
+### [README en español acá :argentina: :mexico:](README.md)
 
 <br>
 

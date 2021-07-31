@@ -1,5 +1,13 @@
-# Harmonium
+![Harmonium](Logo.png)
 ### *Piano virtual para aprender sobre escalas y acordes*
+
+<br />
+
+![Screenshot](Screenshot.png)
+
+<br />
+
+### [English README here :uk: :us:](README-EN.md)
 
 <br />
 
