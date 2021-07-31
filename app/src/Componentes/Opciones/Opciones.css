@@ -72,3 +72,9 @@
 	background-color: var(--color-disabled);
 	cursor: not-allowed;
 }
+
+@media screen and (max-width: 1000px) {
+	.opciones {
+		flex: 100% 0;
+	}
+}

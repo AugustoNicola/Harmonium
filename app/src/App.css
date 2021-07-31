@@ -97,11 +97,21 @@ h1 {
 
 @media screen and (max-width: 1000px) {
 	.main {
-		display: block;
+		display: flex;
+		flex-flow: column nowrap;
+		flex: 1;
+	}
+	
+	.main > .main-selectores {
+		flex: 1;
 	}
 	
 	.main-selectores > .contenedor-selectores {
 		flex-flow: row wrap;
 		gap: 0.5rem;
+	}
+	
+	.main-selectores > .contenedor-selectores > div[class^="selector-"] {
+		max-height: 7rem;
 	}
 }
