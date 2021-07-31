@@ -3,7 +3,7 @@
 
 <br />
 
-![Screenshot](Screenshot.png)
+![Screenshot](screenshot.png)
 
 <br />
 
