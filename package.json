@@ -6,8 +6,7 @@
   "scripts": {
     "start": "cd app && npm run start",
     "build": "cd app && npm run build",
-    "test": "cd app && npm run test",
-    "eject": "cd app && npm run eject"
+    "instalar-dependencias": "cd app && npm install"
   },
   "repository": {
     "type": "git",
