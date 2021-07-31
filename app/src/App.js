@@ -39,7 +39,11 @@ const App = () => {
 							<div className="main-selectores">
 								<Encabezado />
 								<div className="contenedor-selectores" data-transicion style={{animationDelay: "0.4s"}}>
-									<Notas notaSeleccionada={nota[0]} setNota={nota[1]} />
+									<Notas
+										notaSeleccionada={nota[0]}
+										setNota={nota[1]}
+										setIndiceInversion={indiceInversion[1]}
+									/>
 									
 									<Switch>
 										<Route exact path="/acordes">

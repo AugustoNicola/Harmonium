@@ -4,9 +4,13 @@ import DataNotas from "../../Data/DataNotas.json";
 
 import "./Notas.css";
 
-const Notas = ({notaSeleccionada, setNota}) => {
+const Notas = ({notaSeleccionada, setNota, setIndiceInversion}) => {
 	const cambioNota = (e) => {
-		if(e.target.value != "null") setNota(e.target.value);
+		if(e.target.value != "null")
+		{
+			setNota(e.target.value);
+			setIndiceInversion(0);
+		}
 	}
 	
 	return (
