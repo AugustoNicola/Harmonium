@@ -12,14 +12,14 @@ const Opciones = ({nota, acorde, escala, numeroInversionesDisponibles, indiceInv
 	const [tocarDisponible, setTocarDisponible] = useState(false);
 	
 	useEffect(() => {
-		if(nota && acorde)
+		if(nota != "null" && acorde != "null")
 		{
 			nombreNotaInversion ? 
 				setLabel(`${DataNotas[nota].label}${DataAcordes[acorde].label}/${nombreNotaInversion}`) :
 				setLabel(`${DataNotas[nota].label}${DataAcordes[acorde].label}`);
 			setInvertirDisponible(true);
 			setTocarDisponible(true);
-		} else if(nota && escala)
+		} else if(nota != "null" && escala != "null")
 		{
 			setLabel(`${DataNotas[nota].label}${DataEscalas[escala].nombre}`);
 			setInvertirDisponible(false);

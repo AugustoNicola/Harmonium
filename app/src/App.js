@@ -16,9 +16,10 @@ import './normalize.css';
 import './App.css';
 
 const App = () => {
-	const nota = useState(null);
-	const acorde = useState(null);
-	const escala = useState(null);
+	// # "null" para poder asignarle una opcion vacia sin tener que recargar el componente
+	const nota = useState("null");
+	const acorde = useState("null");
+	const escala = useState("null");
 	
 	const numeroInversionesDisponibles = useState(null);
 	const indiceInversion = useState(null);

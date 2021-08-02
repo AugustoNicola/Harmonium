@@ -6,11 +6,11 @@ import DataEscalas from "../../Data/DataEscalas.json";
 
 const Escalas = ({escalaSeleccionada, setEscala, setNota}) => {
 	const cambioEscala = (e) => {
-		if(e.target.value != "null") setEscala(e.target.value);
+		setEscala(e.target.value);
 	}
 	
 	useEffect(() => {
-		return function cleanup() { setEscala(null); setNota(null); }
+		return function cleanup() { setEscala("null"); setNota("null"); }
 	}, [setEscala, setNota])
 	
 	return (
@@ -33,7 +33,7 @@ const Escalas = ({escalaSeleccionada, setEscala, setNota}) => {
 		
 		// * MOBILE
 		<div className="selector-escalas">
-			<select name="escalas" id="escalas" onChange={cambioEscala}>
+			<select name="escalas" id="escalas" onChange={cambioEscala} value={escalaSeleccionada}>
 				<option value={"null"}> Escala </option>
 				{
 					DataEscalas.map((escala) => {

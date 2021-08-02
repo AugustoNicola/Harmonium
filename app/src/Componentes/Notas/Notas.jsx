@@ -6,11 +6,8 @@ import "./Notas.css";
 
 const Notas = ({notaSeleccionada, setNota, setIndiceInversion}) => {
 	const cambioNota = (e) => {
-		if(e.target.value != "null")
-		{
-			setNota(e.target.value);
-			setIndiceInversion(0);
-		}
+		setNota(e.target.value);
+		setIndiceInversion(0);
 	}
 	
 	return (
@@ -33,7 +30,7 @@ const Notas = ({notaSeleccionada, setNota, setIndiceInversion}) => {
 		
 		// * MOBILE
 		<div className="selector-notas">
-			<select name="notas" id="notas" onChange={cambioNota}>
+			<select name="notas" id="notas" onChange={cambioNota} value={notaSeleccionada}>
 				<option value={"null"}> Nota </option>
 				{
 					DataNotas.map((nota) => {

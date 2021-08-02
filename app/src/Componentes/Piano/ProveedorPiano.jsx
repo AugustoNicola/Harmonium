@@ -24,7 +24,7 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 		});
 		pararTodasLasNotas();
 		
-		if(nota && acorde)
+		if(nota != "null" && acorde != "null")
 		{
 			// * ==== ACORDE ====
 			// # Seleccion de notas del acorde
@@ -55,7 +55,7 @@ const ProveedorPiano = ({tocarNota, pararNota, pararTodasLasNotas, nota, acorde,
 				notaDOM.classList.add("activa");
 				tocarNota(valoresMIDI[nota])
 			});
-		} else if(nota && escala)
+		} else if(nota != "null" && escala != "null")
 		{
 			// * ==== ESCALA ====
 			// # seleccion de notas de la escala
