@@ -74,6 +74,8 @@ h1 {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
 	grid-template-rows: 6fr 4fr;
+	
+	height: 0vh; /* ? magia arcana */
 }
 
 .main-selectores {
